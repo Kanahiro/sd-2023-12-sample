@@ -4,7 +4,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import poiGeojson from './poi.json'; // POIデータを読み込む
 
 // MapLibre GL JSのMapインスタンスを初期化＝地図画面を作成
-const map = new Map({
+new Map({
     container: 'map',
     hash: true,
     style: {
@@ -29,7 +29,7 @@ const map = new Map({
                 type: 'vector',
                 tiles: [
                     // ルートディレクトリを参照する
-                    `${window.location.origin}/tiles/{z}/{x}/{y}.pbf`,
+                    `${window.location.origin}/sd-2023-12-sample/tiles/{z}/{x}/{y}.pbf`,
                 ],
                 maxzoom: 14,
             },
