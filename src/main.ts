@@ -1,4 +1,4 @@
-import { Map, Popup } from 'maplibre-gl';
+import { Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import poiGeojson from './poi.json'; // POIデータを読み込む
@@ -105,11 +105,4 @@ const map = new Map({
     },
     center: [143.95, 43.65],
     zoom: 6,
-});
-
-map.on('click', (e) => {
-    // クリックしたPOIの情報を取得
-    const feature = map.queryRenderedFeatures(e.point)[0];
-    const properties = feature.properties;
-    console.log(feature);
 });
